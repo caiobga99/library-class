@@ -1,7 +1,6 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 import React from "react";
 
-import AppLoading from "expo-app-loading";
 import {
   useFonts,
   JustAnotherHand_400Regular,
@@ -12,7 +11,7 @@ export default function Navbar() {
   });
 
   if (!fontsLoaded) {
-    return <AppLoading />;
+    return null;
   } else {
     return (
       <View style={styles.navbar}>
@@ -48,5 +47,4 @@ const styles = StyleSheet.create({
     color: "#36A9A9",
     fontFamily: "JustAnotherHand_400Regular",
   },
-  
 });
