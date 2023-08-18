@@ -4,16 +4,15 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./pages/Home";
 import { TemaProvider } from "./common/Tema";
 import { NavigationContainer } from "@react-navigation/native";
+import Cadastro from "./pages/Cadastro";
 const MyRoutes = () => {
   const Stack = createStackNavigator();
   return (
     <NavigationContainer>
       <TemaProvider>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Navigator screenOptions={{ headerShown: false }  }>
           <Stack.Screen name="Home" component={Home} />
-          {/* <Stack.Screen name="Notifications" component={Notifications} />
-      <Stack.Screen name="Profile" component={Profile} />
-      <Stack.Screen name="Settings" component={Settings} /> */}
+          <Stack.Screen name="Cadastro" component={Cadastro} />
         </Stack.Navigator>
       </TemaProvider>
     </NavigationContainer>
@@ -21,3 +20,4 @@ const MyRoutes = () => {
 };
 
 export default MyRoutes;
+    

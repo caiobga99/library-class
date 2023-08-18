@@ -16,7 +16,7 @@ import {
 } from "@expo-google-fonts/just-another-hand";
 import { JosefinSlab_400Regular } from "@expo-google-fonts/josefin-slab";
 
-export default function Home() {
+export default function Home({navigation}) {
   const { tema, setTema, corLetra, setCorLetra } = useContext(TemaContext);
 
   let [fontsLoaded] = useFonts({
@@ -66,7 +66,7 @@ export default function Home() {
           </Text>
         </View>
         <View>
-          <TouchableOpacity style={styles.button_entrar} activeOpacity={0.7}>
+          <TouchableOpacity style={styles.button_entrar} activeOpacity={0.7} onPress={()=>{navigation.navigate("Cadastro")}}>
             <Text style={styles.textButton}>Entrar</Text>
           </TouchableOpacity>
         </View>
